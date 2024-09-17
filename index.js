@@ -10,6 +10,13 @@ if (username === ""){
     return;
 }
 
+if (username.endsWith("@gmail.com")){
+    alert("Username Is required.");
+    return;
+} else {
+    alert("Please enter a valid Gmail address")
+}
+
 
 if (password === ""){
     alert("Password Is required.");
