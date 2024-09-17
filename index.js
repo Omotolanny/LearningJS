@@ -1,34 +1,37 @@
 function validateForm() {
     
-    var username = document.getElementById("username").Value;
-    var password = document.getElementById("password").Value;
-    var confirmPassword = document.getElementById("confirmPassword").Value;
+    // var username = document.getElementById("user").value;
+    // var password = document.getElementById("pwd").value;
+    // var confirmPassword = document.getElementById("cpwd").value;
 
 
-if (username === ""){
+if (document.getElementById("user").value === ""){
     alert("Username Is required.");
-    return false;
+    return;
 }
 
 
-if (password === ""){
+if (document.getElementById("pwd").value === ""){
     alert("Password Is required.");
-    return false;
+    return;
 }
 
 
-if (confirmPassword === ""){
+if (document.getElementById("cpwd").value === ""){
     alert("Please confirm your password.");
-    return false;
+    return;
 }
 
 
-if (password  !== confirmPassword){
+if (document.getElementById("pwd").value !== document.getElementById("cpwd").value){
     alert("Passwords do not match.");
-    return false;
+    return;
 }
 
-alert("Registration successful!");
-return true;
+if (document.getElementById("pwd").value === document.getElementById("cpwd").value){
+    alert("Registration successful!");
+    return;
+}
+   
 
 }
